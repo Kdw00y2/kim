@@ -49,7 +49,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use('/img', express.static(path.join(__dirname, 'uploads')));
 app.use('/', pageRouter);
 app.use('/auth', authRouter);
 app.use('/post', postRouter);
